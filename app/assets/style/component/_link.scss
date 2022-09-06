@@ -1,0 +1,11 @@
+.hover-gradient:hover {
+    background: $gradient;
+    background-clip: text;
+    color: transparent !important;
+}
+
+.text-gradient {
+    background: $gradient;
+    background-clip: text;
+    color: transparent !important;
+}
