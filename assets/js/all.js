@@ -1,16 +1,17 @@
+"use strict";
+
 $(function () {
   console.log('Hello Bootstrap5');
 });
-
-const swiper = new Swiper('.swiper1', {
+var swiper = new Swiper('.swiper1', {
   // Optional parameters
   loop: true,
   pagination: {
     el: '.swiper-pagination',
-    clickable: true,
+    clickable: true
   },
   autoplay: {
-    delay: 6000,
+    delay: 6000
   },
   grabCursor: true,
   pauseOnMouseEnter: true,
@@ -18,17 +19,16 @@ const swiper = new Swiper('.swiper1', {
   slidesPerView: "auto",
   breakpoints: {
     992: {
-      slidesPerView: 3,
+      slidesPerView: 3
     }
   }
 });
-
-const swiper2 = new Swiper('.swiper2', {
+var swiper2 = new Swiper('.swiper2', {
   // Optional parameters
   loop: true,
   pagination: {
     el: '.swiper-pagination',
-    clickable: true,
+    clickable: true
   },
   grabCursor: true,
   spaceBetween: 24,
@@ -38,7 +38,8 @@ const swiper2 = new Swiper('.swiper2', {
   breakpoints: {
     992: {
       slidesPerView: 4,
-      slidesPerGroup: 4,
+      slidesPerGroup: 4
     }
   }
 });
+//# sourceMappingURL=all.js.map

@@ -1,10 +1,165 @@
----
-title: Michale
-layout: ./app/layout.ejs
-engine: ejs
-current: index
----
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="./assets/images/logo.ico" type="image/x-icon">
+    <title>
+        Michale
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-glass py-8 py-lg-0 border-bottom border-bor-glass2 bf-1 w-100 position-fixed w-100 z-index-10">
+        <div class="container-fluid px-0">
+            <a class="d-flex align-items-center gap-8 font-anek px-16 px-md-24 px-lg-32"
+                href="./index.html"><img src="./assets/images/logo.svg" alt="logo" width="48px"><h1 class="fz-32 fw-bold text-neutral-900 mt-8">ARROWS</h1></a>
+            <ul class="d-none d-lg-flex list-unstyled flex-grow-1">
+                <li class="d-none flex-grow-1 d-lg-block border-start border-end border-bor-glass2 px-40">
+                    <form class="d-flex align-items-center h-100 position-relative">
+                        <input class="input-search" type="text" placeholder="搜尋作品名稱、藝術家名稱"
+                            aria-label="Search">
+                        <button class="btn btn-sm btn-search "><span class="material-symbols-outlined fz-20 text-neutral-900">search</span></button>    
+                    </form>
+                </li>
+                <li class="py-md-32 px-md-40 border-end border-bor-glass2 position-relative">
+                    <a href="./explore.html"class="d-flex fw-bold text-neutral-900 hover-gradient stretched-link"><spanclass="hover-gradient">探索</span></a>
+                </li>
+                <li class="py-md-32 px-md-40 border-end border-bor-glass2 position-relative">
+                    <a href="./valueboard.html" class="d-flex fw-bold text-neutral-900 hover-gradient stretched-link"><span class="hover-gradient">市值</span></a></li>
+                <li class="py-md-32 px-md-40 position-relative">
+                    <button class="d-flex fw-bold text-neutral-900 hover-gradient stretched-link border-0 p-0" data-bs-toggle="modal" data-bs-target="#walletModal">
+                        <span class="material-symbols-outlined">account_balance_wallet</span>
+                    </button>
+                </li>
+            </ul>
+            <div class="d-flex gap-8 me-16 me-md-24 d-lg-none">
+                <button class="btn-navbar" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSearch" aria-controls="navbarSearch" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="material-symbols-outlined">search</span>
+                </button>
+                <button class="btn-navbar" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="material-symbols-outlined ">menu</span>
+                </button>
+            </div>
+            <div class="collapse d-lg-none" id="navbarMenu" style="flex-basis: 100%;">
+                <ul class="list-unstyled text-center mt-8">
+                    <li class="py-16 px-24 border-bottom border-top border-bor-glass2 position-relative">
+                        <a href="./explore.html"class="d-inline-flex fw-bold text-neutral-900 hover-gradient"><spanclass="hover-gradient">探索</span></a>
+                    </li>
+                    <li class="py-16 px-24 border-bottom border-bor-glass2 position-relative">
+                        <a href="./valueboard.html" class="d-inline-flex fw-bold text-neutral-900 hover-gradient"><span class="hover-gradient">市值</span></a></li>
+                    <li class="py-16 px-24 position-relative">
+                        <button class="btn btn-primary text-white w-100" data-bs-toggle="modal" data-bs-target="#walletModal">
+                            連結錢包
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="collapse d-lg-none p-16" id="navbarSearch" style="flex-basis: 100%;">
+                    <form class="d-flex align-items-center position-relative">
+                        <input class="input-search" type="text" placeholder="搜尋作品名稱、藝術家名稱"
+                            aria-label="Search">
+                        <button class="btn btn-sm btn-search "><span class="material-symbols-outlined fz-20 text-neutral-900">search</span></button>    
+                    </form>
+            </div>
+        </div>
+    </nav>
+    <div class="modal fade" id="walletModal" tabindex="-1" aria-labelledby="walletModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content h-100 h-md-auto">
+                <div class="modal-header position-relative justify-content-center px-12 border-bottom border-bor2">
+                    <h5 class="modal-title" id="walletModalLabel">連結你的錢包</h5>
+                    <button type="button" class="btn-close position-absolute d-md-none" data-bs-dismiss="modal" aria-label="Close"
+                    style="right: 24px;"></button>
+                </div>
+                <div class="modal-body h-100">
+                    <div class="row g-8">
+                        <div class="col-6">
+                            <div class="position-relative">
+                                <input type="radio" name="wallet" id="MetaMask" class="wallet-radio" checked>
+                                <label for="MetaMask" class="d-flex gap-16 align-items-center border border-bor p-16 position-relative">
+                                    <img src="./assets/images/logo/connect01.png" alt="MetaMask" width="16px">
+                                    <span class="font-anek fz-16 fw-bold lh-1 mt-4">
+                                        MetaMask
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="position-relative">
+                                <input type="radio" name="wallet" id="Coinbase Wallet" class="wallet-radio">
+                                <label for="Coinbase Wallet" class="d-flex gap-16 align-items-center border border-bor p-16 position-relative">
+                                    <img src="./assets/images/logo/connect02.png" alt="Coinbase Wallet" width="16px">
+                                    <span class="font-anek fz-16 fw-bold lh-1 mt-4">
+                                        Coinbase Wallet
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="position-relative">
+                                <input type="radio" name="wallet" id="WalletConnect" class="wallet-radio">
+                                <label for="WalletConnect" class="d-flex gap-16 align-items-center border border-bor p-16 position-relative">
+                                    <img src="./assets/images/logo/connect03.png" alt="WalletConnect" width="16px">
+                                    <span class="font-anek fz-16 fw-bold lh-1 mt-4">
+                                        WalletConnect
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="position-relative">
+                                <input type="radio" name="wallet" id="Phantom" class="wallet-radio">
+                                <label for="Phantom" class="d-flex gap-16 align-items-center border border-bor p-16 position-relative">
+                                    <img src="./assets/images/logo/connect04.png" alt="Phantom" width="16px">
+                                    <span class="font-anek fz-16 fw-bold lh-1 mt-4">
+                                        Phantom
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="position-relative">
+                                <input type="radio" name="wallet" id="Glow" class="wallet-radio">
+                                <label for="Glow" class="d-flex gap-16 align-items-center border border-bor p-16 position-relative">
+                                    <img src="./assets/images/logo/connect05.png" alt="Glow" width="16px">
+                                    <span class="font-anek fz-16 fw-bold lh-1 mt-4">
+                                        Glow
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="position-relative">
+                                <input type="radio" name="wallet" id="Fortmatic" class="wallet-radio">
+                                <label for="Fortmatic" class="d-flex gap-16 align-items-center border border-bor p-16 position-relative">
+                                    <img src="./assets/images/logo/connect06.png" alt="Fortmatic" width="16px">
+                                    <span class="font-anek fz-16 fw-bold lh-1 mt-4">
+                                        Fortmatic
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center border-top border-bor2">
+                    <button type="button" class="btn btn-primary py-8 px-48 m-0 text-white rounded-0">連結錢包</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pt-lg-88 pt-56">
+        
 <section class="container mt-24 mt-md-40">
     <div class="row gy-24">
         <div class="col-lg-8">
@@ -291,3 +446,16 @@ current: index
         </div>
       </div>
 </section>
+        <div id="root">
+    </div>
+
+    <footer class="bg-neutral-700 py-24">
+        <p class="text-center text-white">© ARROWS. All Rights Reserved</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+</body>
+
+</html>
