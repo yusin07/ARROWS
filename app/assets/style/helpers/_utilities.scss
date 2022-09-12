@@ -1,116 +1,84 @@
-$utilities: map-merge(
-    $utilities, (
-        "font-family": (
-            property: font-family,
-            class: font,
-            values: (
-                anek: $font-family-Anek,
-                default: $font-family-sans-serif
-            )
-        ),
+$utilities: map-merge($utilities, ("font-family": (property: font-family,
+                class: font,
+                values: (anek: $font-family-Anek,
+                    default: $font-family-sans-serif )),
 
-        "font-size": map-merge(
-            map-get($utilities,"font-size"),
-            (
-                class: fz,
+            "font-size": map-merge(map-get($utilities, "font-size"),
+                (class: fz,
+                    responsive: true,
+                    rfs: false,
+                )),
+
+            "gradient": (property: background-image,
+                class: bg,
                 responsive: true,
-                rfs: false,
-            )
-        ),
+                values: (gradient: var(--#{$variable-prefix}gradient),
+                    glass: $gradient-glass,
+                    none: none,
+                )),
 
-        "gradient": (
-            property: background-image,
-            class: bg,
-            responsive: true,
-            values: (
-                gradient: var(--#{$variable-prefix}gradient),
-                glass: $gradient-glass,
-                none: none,
-                )
-        ),
-            
-        "blur": (
-            property: backdrop-filter,
-            class: bf,
-            values: (
-                1: blur(12px),
-                2: blur(24px)
-            )
-        ),
-        
-        "z-index": (
-            property: z-index,
-            class: z-index,
-            values: (
-                10: 10,
-                7: 7,
-                5: 5,
-                3: 3,
-                1: 1,
-                -1: -1,
-            )
-        ),
+            "blur": (property: backdrop-filter,
+                class: bf,
+                values: (1: blur(12px),
+                    2: blur(24px))),
 
-        "rounded": (
-            property: border-radius,
-            class: rounded,
-            responsive: true,
-            values: (
-                null: $border-radius,
-                0: 0,
-                4: 4px,
-                8: 8px,
-                16: 16px,
-                circle: 50%,
-                pill: $border-radius-pill
-            )
-        ),
+            "z-index": (property: z-index,
+                class: z-index,
+                values: (10: 10,
+                    7: 7,
+                    5: 5,
+                    3: 3,
+                    1: 1,
+                    -1: -1,
+                )),
 
-        "shadow": (
-            property: box-shadow,
-            class: shadow,
-            responsive: true,
-            values: (
-                null: $box-shadow,
-                sm: $box-shadow-sm,
-                lg: $box-shadow-lg,
-                glass: 0px 0px 24px rgba(0, 0, 0, 0.08),
-                1: 0px 0px 16px rgba(0, 0, 0, 0.32),
-                2: 0px 0px 16px rgba(0, 0, 0, 0.08),
-                none: none,
-            )
-        ),
-
-        "object-fit": (
-            property: object-fit,
-            values: (
-                fill,
-                contain,
-                cover,
-                fixed,
-            )
-        ),
-
-        "border-width": map-merge(
-            map-get($utilities, "border-width"),
-            (
+            "rounded": (property: border-radius,
+                class: rounded,
                 responsive: true,
-            )
-        ),
+                values: (null: $border-radius,
+                    0: 0,
+                    4: 4px,
+                    8: 8px,
+                    16: 16px,
+                    circle: 50%,
+                    pill: $border-radius-pill )),
 
-        "position": map-merge(
-            map-get($utilities, "position"),
-            (
-                responsive: true, 
-            )
-        ),
+            "shadow": (property: box-shadow,
+                class: shadow,
+                responsive: true,
+                values: (null: $box-shadow,
+                    sm: $box-shadow-sm,
+                    lg: $box-shadow-lg,
+                    glass: 0px 0px 24px rgba(0, 0, 0, 0.08),
+                    1: 0px 0px 16px rgba(0, 0, 0, 0.32),
+                    2: 0px 0px 16px rgba(0, 0, 0, 0.08),
+                    none: none,
+                )),
 
-        "text-shadow": (
-            property: text-shadow,
-            values: (
-                1: 0px 0px 8px rgba(0, 0, 0, 0.16),
-            )
-        )
-    )
-);
+            "object-fit": (property: object-fit,
+                values: (fill,
+                    contain,
+                    cover,
+                    fixed,
+                )),
 
+            "border-width": map-merge(map-get($utilities, "border-width"),
+                (responsive: true,
+                )),
+
+            "position": map-merge(map-get($utilities, "position"),
+                (responsive: true,
+                )),
+
+            "text-shadow": (property: text-shadow,
+                values: (1: 0px 0px 8px rgba(0, 0, 0, 0.16),
+                )),
+            "height": (property: height,
+                class: h,
+                responsive: ture,
+                values: (25: 25%,
+                    50: 50%,
+                    75: 75%,
+                    100: 100%,
+                    auto: auto)),
+        ));

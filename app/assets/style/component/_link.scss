@@ -9,3 +9,15 @@
     background-clip: text;
     color: transparent !important;
 }
+
+.hover-show {
+    transition: all .2s ease-in-out;
+    display: none;
+}
+
+.hover-trigger:hover {
+
+    .hover-show{
+        display: block;
+    }
+}

@@ -1,0 +1,513 @@
+---
+title: 炫彩環
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+
+<section class="container my-32 my-md-40">
+    <div class="row">
+        <div class="d-none d-xl-block col-xl-3">
+            <div class="p-16 bg-glass border border-2 border-bor-glass bf-2 rounded-8 position-relative shadow-glass">
+                <div class="card-dot card-dot-1"></div>
+                <div class="card-dot card-dot-2"></div>
+                <div class="card-dot card-dot-3"></div>
+                <div class="card-dot card-dot-4"></div>
+                <div class="accordion bg-white rounded-4" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item p-16 border-bottom border-bor1">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                            <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                aria-controls="panelsStayOpen-collapseOne">
+                                網路
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                            aria-labelledby="panelsStayOpen-headingOne">
+                            <div class="accordion-body mt-16">
+                                <div class="form-check d-flex justify-content-between align-items-center">
+                                    <label class="form-check-label" for="ecoin">
+                                        以太坊
+                                    </label>
+                                    <input class="form-check-input" type="checkbox" value="" id="ecoin">
+                                </div>
+                                <div class="form-check d-flex justify-content-between align-items-center">
+                                    <label class="form-check-label" for="bnb">
+                                        BNB 智能鏈
+                                    </label>
+                                    <input class="form-check-input" type="checkbox" value="" id="bnb" checked>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item p-16 border-bottom border-bor1">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                            <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseTwo">
+                                狀態
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show"
+                            aria-labelledby="panelsStayOpen-headingTwo">
+                            <div class="accordion-body mt-16">
+                                <div class="form-check d-flex justify-content-between align-items-center">
+                                    <label class="form-check-label" for="forView">
+                                        僅展示
+                                    </label>
+                                    <input class="form-check-input" type="checkbox" value="" id="forView">
+                                </div>
+                                <div class="form-check d-flex justify-content-between align-items-center">
+                                    <label class="form-check-label" for="forBuy">
+                                        拍賣中
+                                    </label>
+                                    <input class="form-check-input" type="checkbox" value="" id="forBuy" checked>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item p-16 border-bottom border-bor1">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                            <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseThree">
+                                價格
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse show"
+                            aria-labelledby="panelsStayOpen-headingThree">
+                            <div class="accordion-body mt-16">
+                                <div class="d-flex flex-column align-items-center gap-8">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>ETH</option>
+                                        <option value="1">BTC</option>
+                                        <option value="2">ADA</option>
+                                        <option value="3">SOL</option>
+                                    </select>
+                                    <div class="d-flex gap-8 align-items-center">
+                                        <input type="number" class="form-control" id="price-low" placeholder="最低">
+                                        <span>-</span>
+                                        <input type="number" class="form-control" id="price-high" placeholder="最高">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item p-16">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                            <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseFour">
+                                顏色
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse show"
+                            aria-labelledby="panelsStayOpen-headingFour">
+                            <div class="accordion-body mt-16">
+                                <div class="form-check d-flex justify-content-between align-items-center">
+                                    <label class="form-check-label" for="transparent">
+                                        透明
+                                    </label>
+                                    <input class="form-check-input" type="checkbox" value="" id="transparent">
+                                </div>
+                                <div class="form-check d-flex justify-content-between align-items-center">
+                                    <label class="form-check-label" for="red">
+                                        紅色
+                                    </label>
+                                    <input class="form-check-input" type="checkbox" value="" id="red">
+                                </div>
+                                <div class="form-check d-flex justify-content-between align-items-center">
+                                    <label class="form-check-label" for="blue">
+                                        藍色
+                                    </label>
+                                    <input class="form-check-input" type="checkbox" value="" id="blue">
+                                </div>
+                                <div class="form-check d-flex justify-content-between align-items-center">
+                                    <label class="form-check-label" for="green">
+                                        綠色
+                                    </label>
+                                    <input class="form-check-input" type="checkbox" value="" id="green">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-9">
+            <div class="row">
+                <div class="col-xl-7">
+                    <div class="d-flex gap-16 align-items-center">
+                        <img src="./assets/images/artist04.jpeg" alt="artist" height="32px" width="32px"
+                            class="rounded-circle object-fit-cover">
+                        <strong class="font-anek lh-1 mt-8">Arnas Cole</strong>
+                    </div>
+                    <h2 class="fz-32 fw-bold mt-8">炫彩環</h2>
+                    <p class="text-neutral-700 mt-8">運用ai數據所產生出的形體，每個都是獨一無二的，搭配不同材質及顏色，是極具收藏價值的數位藝術品。</p>
+                </div>
+                <div class="col-xl-5 align-self-end mt-16">
+                    <div class="p-8 bg-glass shadow-glass rounded-4 bf-1 border border-bor-glass">
+                        <div class="row g-0 bg-white">
+                            <div class="col">
+                                <div class="text-center pt-16 pb-8 border-end border-bor">
+                                    <h3 class="fz-16">項目</h3>
+                                    <strong class="font-anek fz-24 mt-8 d-block">6.4 k</strong>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="text-center pt-16 pb-8 border-end border-bor">
+                                    <h3 class="fz-16">擁有者</h3>
+                                    <strong class="font-anek fz-24 mt-8 d-block">2.5 k</strong>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="text-center pt-16 pb-8 border-end border-bor">
+                                    <h3 class="fz-16">底價</h3>
+                                    <strong
+                                        class="font-anek fz-24 mt-8 d-block d-flex justify-content-center align-items-center gap-4"><img
+                                            src="./assets/images/ethereum.svg" alt="ethereum" width="12px" class="mb-4">
+                                        1.38 k</strong>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="text-center pt-16 pb-8">
+                                    <h3 class="fz-16">總額</h3>
+                                    <strong class="font-anek fz-24 mt-8 d-block">2.8 k</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-12 mt-40">
+                    <select class="form-select ms-auto" aria-label="Default select example" style="width: 156px;">
+                        <option selected>最新上架</option>
+                        <option value="1">價格最高</option>
+                        <option value="2">價格最低</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row pt-32 pt-md-40 gy-24" data-masonry='{"percentPosition": true }'>
+                <div class="col-6 col-lg-4">
+                    <a href="./artinfo.html"
+                        class="hover-trigger position-relative d-block rounded-8 overflow-hidden bg-glass bf-2 border border-2 border-bor-glass shadow-glass">
+                        <div class="position-relative">
+                            <img src="./assets/images/art18.jpeg" alt="art">
+                            <div class="hover-show position-absolute w-100 h-100 bg-dark top-0 p-16">
+                                <hgroup class="p-16 h-100 border border-white">
+                                    <p class="text-white">唯一想擁有的人，唯一不可以擁有的</p>
+                                    <div class="d-flex align-items-center gap-4 mt-16">
+                                        <img src="./assets/images/ethereum-white.svg" alt="ethreum" width="16px">
+                                        <span class="mt-8 font-anek text-neutral-900 text-white fw-bold lh-1">300</span>
+                                    </div>
+                                </hgroup>
+                            </div>
+                        </div>
+                        <hgroup class="p-16">
+                            <h3 class="fz-16 fw-bold text-neutral-900">區塊戀-他的私生活</h3>
+                        </hgroup>
+                    </a>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <a href="#"
+                        class="hover-trigger position-relative d-block rounded-8 overflow-hidden bg-glass bf-2 border border-2 border-bor-glass shadow-glass">
+                        <div class="position-relative">
+                            <img src="./assets/images/art29.jpeg" alt="art">
+                            <div class="hover-show position-absolute w-100 h-100 bg-dark top-0 p-16">
+                                <hgroup class="p-16 h-100 border border-white">
+                                    <p class="text-white">唯一想擁有的人，唯一不可以擁有的</p>
+                                    <div class="d-flex align-items-center gap-4 mt-16">
+                                        <img src="./assets/images/ethereum-white.svg" alt="ethreum" width="16px">
+                                        <span class="mt-8 font-anek text-neutral-900 text-white fw-bold lh-1">300</span>
+                                    </div>
+                                </hgroup>
+                            </div>
+                        </div>
+                        <hgroup class="p-16">
+                            <h3 class="fz-16 fw-bold text-neutral-900">區塊戀-他的私生活</h3>
+                        </hgroup>
+                    </a>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <a href="#"
+                        class="hover-trigger position-relative d-block rounded-8 overflow-hidden bg-glass bf-2 border border-2 border-bor-glass shadow-glass">
+                        <div class="position-relative">
+                            <img src="./assets/images/art20.jpeg" alt="art">
+                            <div class="hover-show position-absolute w-100 h-100 bg-dark top-0 p-16">
+                                <hgroup class="p-16 h-100 border border-white">
+                                    <p class="text-white">唯一想擁有的人，唯一不可以擁有的</p>
+                                    <div class="d-flex align-items-center gap-4 mt-16">
+                                        <img src="./assets/images/ethereum-white.svg" alt="ethreum" width="16px">
+                                        <span class="mt-8 font-anek text-neutral-900 text-white fw-bold lh-1">300</span>
+                                    </div>
+                                </hgroup>
+                            </div>
+                        </div>
+                        <hgroup class="p-16">
+                            <h3 class="fz-16 fw-bold text-neutral-900">區塊戀-他的私生活</h3>
+                        </hgroup>
+                    </a>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <a href="#"
+                        class="hover-trigger position-relative d-block rounded-8 overflow-hidden bg-glass bf-2 border border-2 border-bor-glass shadow-glass">
+                        <div class="position-relative">
+                            <img src="./assets/images/art21.jpeg" alt="art">
+                            <div class="hover-show position-absolute w-100 h-100 bg-dark top-0 p-16">
+                                <hgroup class="p-16 h-100 border border-white">
+                                    <p class="text-white">唯一想擁有的人，唯一不可以擁有的</p>
+                                    <div class="d-flex align-items-center gap-4 mt-16">
+                                        <img src="./assets/images/ethereum-white.svg" alt="ethreum" width="16px">
+                                        <span class="mt-8 font-anek text-neutral-900 text-white fw-bold lh-1">300</span>
+                                    </div>
+                                </hgroup>
+                            </div>
+                        </div>
+                        <hgroup class="p-16">
+                            <h3 class="fz-16 fw-bold text-neutral-900">區塊戀-他的私生活</h3>
+                        </hgroup>
+                    </a>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <a href="#"
+                        class="hover-trigger position-relative d-block rounded-8 overflow-hidden bg-glass bf-2 border border-2 border-bor-glass shadow-glass">
+                        <div class="position-relative">
+                            <img src="./assets/images/art26.jpeg" alt="art">
+                            <div class="hover-show position-absolute w-100 h-100 bg-dark top-0 p-16">
+                                <hgroup class="p-16 h-100 border border-white">
+                                    <p class="text-white">唯一想擁有的人，唯一不可以擁有的</p>
+                                    <div class="d-flex align-items-center gap-4 mt-16">
+                                        <img src="./assets/images/ethereum-white.svg" alt="ethreum" width="16px">
+                                        <span class="mt-8 font-anek text-neutral-900 text-white fw-bold lh-1">300</span>
+                                    </div>
+                                </hgroup>
+                            </div>
+                        </div>
+                        <hgroup class="p-16">
+                            <h3 class="fz-16 fw-bold text-neutral-900">區塊戀-他的私生活</h3>
+                        </hgroup>
+                    </a>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <a href="#"
+                        class="hover-trigger position-relative d-block rounded-8 overflow-hidden bg-glass bf-2 border border-2 border-bor-glass shadow-glass">
+                        <div class="position-relative">
+                            <img src="./assets/images/art04.jpeg" alt="art">
+                            <div class="hover-show position-absolute w-100 h-100 bg-dark top-0 p-16">
+                                <hgroup class="p-16 h-100 border border-white">
+                                    <p class="text-white">唯一想擁有的人，唯一不可以擁有的</p>
+                                    <div class="d-flex align-items-center gap-4 mt-16">
+                                        <img src="./assets/images/ethereum-white.svg" alt="ethreum" width="16px">
+                                        <span class="mt-8 font-anek text-neutral-900 text-white fw-bold lh-1">300</span>
+                                    </div>
+                                </hgroup>
+                            </div>
+                        </div>
+                        <hgroup class="p-16">
+                            <h3 class="fz-16 fw-bold text-neutral-900">區塊戀-他的私生活</h3>
+                        </hgroup>
+                    </a>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <a href="#"
+                        class="hover-trigger position-relative d-block rounded-8 overflow-hidden bg-glass bf-2 border border-2 border-bor-glass shadow-glass">
+                        <div class="position-relative">
+                            <img src="./assets/images/art27.jpeg" alt="art">
+                            <div class="hover-show position-absolute w-100 h-100 bg-dark top-0 p-16">
+                                <hgroup class="p-16 h-100 border border-white">
+                                    <p class="text-white">唯一想擁有的人，唯一不可以擁有的</p>
+                                    <div class="d-flex align-items-center gap-4 mt-16">
+                                        <img src="./assets/images/ethereum-white.svg" alt="ethreum" width="16px">
+                                        <span class="mt-8 font-anek text-neutral-900 text-white fw-bold lh-1">300</span>
+                                    </div>
+                                </hgroup>
+                            </div>
+                        </div>
+                        <hgroup class="p-16">
+                            <h3 class="fz-16 fw-bold text-neutral-900">區塊戀-他的私生活</h3>
+                        </hgroup>
+                    </a>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <a href="#"
+                        class="hover-trigger position-relative d-block rounded-8 overflow-hidden bg-glass bf-2 border border-2 border-bor-glass shadow-glass">
+                        <div class="position-relative">
+                            <img src="./assets/images/art28.jpeg" alt="art">
+                            <div class="hover-show position-absolute w-100 h-100 bg-dark top-0 p-16">
+                                <hgroup class="p-16 h-100 border border-white">
+                                    <p class="text-white">唯一想擁有的人，唯一不可以擁有的</p>
+                                    <div class="d-flex align-items-center gap-4 mt-16">
+                                        <img src="./assets/images/ethereum-white.svg" alt="ethreum" width="16px">
+                                        <span class="mt-8 font-anek text-neutral-900 text-white fw-bold lh-1">300</span>
+                                    </div>
+                                </hgroup>
+                            </div>
+                        </div>
+                        <hgroup class="p-16">
+                            <h3 class="fz-16 fw-bold text-neutral-900">區塊戀-他的私生活</h3>
+                        </hgroup>
+                    </a>
+                </div>
+                <div class="col-6 col-lg-4">
+                    <a href="#"
+                        class="hover-trigger position-relative d-block rounded-8 overflow-hidden bg-glass bf-2 border border-2 border-bor-glass shadow-glass">
+                        <div class="position-relative">
+                            <img src="./assets/images/art30.jpeg" alt="art">
+                            <div class="hover-show position-absolute w-100 h-100 bg-dark top-0 p-16">
+                                <hgroup class="p-16 h-100 border border-white">
+                                    <p class="text-white">唯一想擁有的人，唯一不可以擁有的</p>
+                                    <div class="d-flex align-items-center gap-4 mt-16">
+                                        <img src="./assets/images/ethereum-white.svg" alt="ethreum" width="16px">
+                                        <span class="mt-8 font-anek text-neutral-900 text-white fw-bold lh-1">300</span>
+                                    </div>
+                                </hgroup>
+                            </div>
+                        </div>
+                        <hgroup class="p-16">
+                            <h3 class="fz-16 fw-bold text-neutral-900">區塊戀-他的私生活</h3>
+                        </hgroup>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button type="button"
+        class="mt-24 mt-mb-40 d-xl-none btn btn-neutral-900 py-8 px-48 rounded-0 position-sticky start-50 translate-middle-x"
+        data-bs-toggle="modal" data-bs-target="#filterModal" style="bottom: 24px;">
+        篩選條件
+    </button>
+</section>
+<div class="modal fade" id="filterModal" tabindex="-1" aria-labelledby="filterModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header position-relative justify-content-center px-12 border-bottom border-bor2">
+                <h5 class="modal-title" id="exampleModalLabel">篩選條件</h5>
+                <button type="button" class="btn-close position-absolute" data-bs-dismiss="modal" aria-label="Close"
+                    style="right: 24px;"></button>
+            </div>
+            <div class="modal-body">
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item p-16 border-bottom border-bor1">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                            <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                aria-controls="panelsStayOpen-collapseOne">
+                                網路
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                            aria-labelledby="panelsStayOpen-headingOne">
+                            <div class="accordion-body mt-16">
+                                <div class="form-check d-flex justify-content-between align-items-center">
+                                    <label class="form-check-label" for="ecoin">
+                                        以太坊
+                                    </label>
+                                    <input class="form-check-input" type="checkbox" value="" id="ecoin">
+                                </div>
+                                <div class="form-check d-flex justify-content-between align-items-center">
+                                    <label class="form-check-label" for="bnb">
+                                        BNB 智能鏈
+                                    </label>
+                                    <input class="form-check-input" type="checkbox" value="" id="bnb" checked>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item p-16 border-bottom border-bor1">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                            <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseTwo">
+                                狀態
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show"
+                            aria-labelledby="panelsStayOpen-headingTwo">
+                            <div class="accordion-body mt-16">
+                                <div class="form-check d-flex justify-content-between align-items-center">
+                                    <label class="form-check-label" for="forView">
+                                        僅展示
+                                    </label>
+                                    <input class="form-check-input" type="checkbox" value="" id="forView">
+                                </div>
+                                <div class="form-check d-flex justify-content-between align-items-center">
+                                    <label class="form-check-label" for="forBuy">
+                                        拍賣中
+                                    </label>
+                                    <input class="form-check-input" type="checkbox" value="" id="forBuy" checked>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item p-16 border-bottom border-bor1">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                            <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseThree">
+                                價格
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse show"
+                            aria-labelledby="panelsStayOpen-headingThree">
+                            <div class="accordion-body mt-16">
+                                <div class="d-flex flex-column align-items-center gap-8">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>ETH</option>
+                                        <option value="1">BTC</option>
+                                        <option value="2">ADA</option>
+                                        <option value="3">SOL</option>
+                                    </select>
+                                    <div class="d-flex gap-8 align-items-center w-100">
+                                        <input type="number" class="form-control" id="price-low" placeholder="最低">
+                                        <span>-</span>
+                                        <input type="number" class="form-control" id="price-high" placeholder="最高">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item p-16">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                            <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseFour">
+                                顏色
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse show"
+                            aria-labelledby="panelsStayOpen-headingFour">
+                            <div class="accordion-body mt-16">
+                                <div class="form-check d-flex justify-content-between align-items-center">
+                                    <label class="form-check-label" for="transparent">
+                                        透明
+                                    </label>
+                                    <input class="form-check-input" type="checkbox" value="" id="transparent">
+                                </div>
+                                <div class="form-check d-flex justify-content-between align-items-center">
+                                    <label class="form-check-label" for="red">
+                                        紅色
+                                    </label>
+                                    <input class="form-check-input" type="checkbox" value="" id="red">
+                                </div>
+                                <div class="form-check d-flex justify-content-between align-items-center">
+                                    <label class="form-check-label" for="blue">
+                                        藍色
+                                    </label>
+                                    <input class="form-check-input" type="checkbox" value="" id="blue">
+                                </div>
+                                <div class="form-check d-flex justify-content-between align-items-center">
+                                    <label class="form-check-label" for="green">
+                                        綠色
+                                    </label>
+                                    <input class="form-check-input" type="checkbox" value="" id="green">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer p-0">
+                <button type="button" class="btn btn-primary py-12 px-24 m-0 text-white rounded-0 w-100">確認</button>
+            </div>
+        </div>
+    </div>
+</div>
